@@ -269,7 +269,10 @@
 }
 
 
-@media screen and (max-width: 1020px) {
+@media screen and (min-width: 1024px) {
+    header{
+        background: #191a1a;
+    }
     .services-container{
         width: 100%;
         display: flex;
@@ -442,6 +445,11 @@
     overflow-y: scroll;
     
 }
+.contact__chat__details__cards .card{
+
+    width: 100%;
+  
+  }
 }
 
 @media screen and (max-width: 750px) {
