@@ -512,6 +512,14 @@
         overflow-y: scroll;
       
     }
+    .improvement__constraction .middle{
+ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+      
+    }
   
 }
 
