@@ -278,6 +278,8 @@
         display: flex;
         align-items: center;
         display: none;
+    
+    
   
     }
 
@@ -343,6 +345,7 @@
 .details__blog__page{
   
     width: 100%;
+    z-index: 3;
   
   }
   .blog__page-info .blog-header .description h1{
@@ -352,6 +355,9 @@
 
   .details-page{
     width: 100%;
+    z-index: 3;
+    margin-top: 2rem;
+ 
  
 }
 .details-wrapper .top{
@@ -365,6 +371,8 @@
 }
 .contact__chat__container{
     width: 100%;
+    z-index: 3;
+    margin-top: 0;
   }
   .contact__chat__details{
   flex-direction: column-reverse;
@@ -449,6 +457,10 @@
 
     width: 100%;
   
+  }
+  .list__of__target_status{
+    margin-top: 1rem;
+    z-index: 3;
   }
 }
 
