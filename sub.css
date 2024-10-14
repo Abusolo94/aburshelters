@@ -1,0 +1,508 @@
+:root{
+    --bg-color: #191a1a;
+    --text-color: lightBlue;
+    --btn-color: rgb(5, 73, 103);
+    --pragraph-colore: #a28a05;
+    --link-color: hsl(195, 73%, 81%);
+  }
+
+
+
+.services-container{
+    background: gray;
+    padding: 10px 2rem;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    width: 1500px;
+ 
+    max-width: 1500px;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow: scroll;
+    display: none;
+   
+  
+}
+.services-container .back{
+    position: fixed;
+    color: red;
+    font-size: 2em;
+    cursor: pointer;
+    background: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+ 
+}
+.services-container.show{
+    display: block;
+    z-index: 4;
+}
+.improvement__constraction .top{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+}
+.improvement__constraction .top .left h1,
+.rental__housing .top h1,
+.rental__housing  .bottom h1{
+    color: var(--text-color);
+    text-transform: capitalize;
+
+}
+.improvement__constraction .top .left p, 
+.rental__housing .top p,
+.rental__housing  .bottom p{
+    font-size: 20px;
+    line-height: 1.88rem;
+}
+.improvement__constraction .top .left button,
+.improvement__constraction .bottom button,
+.rental__housing .top button,
+.rental__housing  .bottom button{
+    background: var(--btn-color);
+    color: #a28a05;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.improvement__constraction .top .right img, .rental__housing .top .left img{
+    border-radius: 10px;
+
+}
+
+.improvement__constraction .middle{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.improvement__constraction .middle .cards{
+    background: var(--bg-color);
+    margin: 5px;
+    padding: 6px;
+    text-align: center;
+    height: 150px;
+}
+.improvement__constraction .middle .cards h1{
+    color: var(--text-color);
+    font-size: 20px;
+}
+.improvement__constraction .middle .cards p{
+    color: var(--pragraph-colore);
+}
+.improvement__constraction .bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.improvement__constraction .bottom h1{
+    color: var(--text-color);
+}
+.improvement__constraction .bottom p{
+    line-height: 1.88rem;
+    font-size: 20px;
+}
+
+
+.rental__housing {
+    margin-top: 2rem;
+}
+
+.rental__housing .top{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.rental__housing .middle{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+.rental__housing .middle .card{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #191a1a;
+    margin: 4px;
+    flex-direction: column;
+    padding: 10px;
+}
+.rental__housing .middle .card h1{
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.rental__housing .middle .card p{
+    color: var(--pragraph-colore);
+    line-height: 2rem;
+}
+.rental__housing .middle .card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.rental__housing  .bottom{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.inventory, .financial, .sales-purchase,
+.property-managment{
+    margin-top: 2rem;
+}
+.inventory .top, .financial .top, .sales-purchase .top,
+.property-managment .top{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.inventory .top .right h1, .financial .left h1,
+.sales-purchase .top .left h1,
+.property-managment .top .right h1{
+    color: var(--text-color);
+
+}
+.inventory .top .left img, 
+.inventory .bottom .right img, .financial .top .right img,
+.property-managment .top .left img{
+    border-radius: 10px;
+}
+.inventory .top .right  p, .financial .top .left p,
+.sales-purchase .top .left p, .property-managment .top .right p {
+    font-size: 20px;
+    line-height: 2rem;
+}
+.inventory .top .right button, .financial .top .left button,
+.sales-purchase .top .left button, .property-managment .top .right button{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: var(--btn-color);
+    color: #a28a05;
+    border: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.inventory .middle, .financial .middle,
+.sales-purchase .middle, .property-managment .middle{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+    gap: 10px;
+
+}
+.inventory .middle .card, .financial .middle .card,
+.sales-purchase .middle .card, .property-managment .middle .card{
+    background: #191a1a;
+    padding: 10px;
+    text-align: center;
+}
+.inventory .middle .card h1, .financial .middle h1,
+.sales-purchase .card h1, .property-managment .middle h1{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.inventory .middle .card p, .financial .middle p,
+.sales-purchase .middle p, .property-managment .middle p{
+    color: var(--pragraph-colore);
+    line-height: 1.88rem;
+}
+.inventory .bottom, .financial .bottom, .sales-purchase .bottom,
+.property-managment .bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 10px;
+}
+.inventory .bottom .left, .financial .bottom .right,
+.sales-purchase .right, .property-managment .bottom .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+}
+.inventory .bottom .left h1, .financial .bottom .right h1,
+.sales-purchase .bottom .right h1, .property-managment .bottom .left h1{
+    color: var(--text-color);
+    font-size: 24px;
+    text-align: center;
+    
+}
+.sales-purchase .bottom .right p, .property-managment .bottom .left p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.88rem;
+}
+.inventory .bottom .left button, .financial .bottom .right button,
+.sales-purchase .bottom .right button, .property-managment .bottom .left button{
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    background: var(--btn-color);
+    border: none;
+    color: var(--pragraph-colore);
+    cursor: pointer;
+}
+
+.serv__spec__details{
+    display: none;
+}
+.serv__spec__details.show{
+    display: block;
+}
+
+
+@media screen and (max-width: 1020px) {
+    .services-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        display: none;
+  
+    }
+
+    .improvement__constraction .middle{
+ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+      
+    }
+    .improvement__constraction{
+        margin-top: 3rem;
+    }
+    .improvement__constraction .top{
+   
+      flex-direction: column;
+     gap: 1rem;
+    
+    }
+    .improvement__constraction .top h1{
+        font-size: 20px;
+    }
+    .improvement__constraction .bottom{
+      flex-direction: column-reverse;
+      padding-bottom: 5rem;
+    }
+    .improvement__constraction .bottom h1{
+        font-size: 24px;
+    }
+
+    .inventory .top, .financial .top, .sales-purchase .top,
+.property-managment .top, .rental__housing .top{
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.inventory .top , .financial .top  , .sales-purchase .top ,
+.property-managment .top , .rental__housing .top {
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.inventory .top img, .financial .top  img, .sales-purchase .top img,
+.property-managment .top img, .rental__housing .top img{
+    width: 100%;
+
+}
+    
+
+.inventory .middle, .financial .middle,
+.sales-purchase .middle, .property-managment .middle, .rental__housing .middle{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+ 
+}
+.inventory .bottom, .financial .bottom, .sales-purchase .bottom,
+.property-managment .bottom, .rental__housing .bottom{
+ flex-direction: column;
+ padding-bottom: 6rem;
+}
+
+.details__blog__page{
+  
+    width: 100%;
+  
+  }
+  .blog__page-info .blog-header .description h1{
+    font-size: 20px;
+  
+  }
+
+  .details-page{
+    width: 100%;
+ 
+}
+.details-wrapper .top{
+  flex-direction: column-reverse;
+}
+.details-wrapper .bottom .imag-list img{
+    width: 150px;
+    margin: 1em;
+    height: 100px;
+    border-radius: 10px;
+}
+.contact__chat__container{
+    width: 100%;
+  }
+  .contact__chat__details{
+  flex-direction: column-reverse;
+  margin-top: 2rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 6rem;
+  
+  }
+  .cart{
+   
+    width: 100%;
+  
+}
+.cart-section .top h2{
+    text-align: left;
+    font-size: 17px;
+  }
+ 
+  .actionss .icons span{
+      font-size: 15px;
+     
+  }
+  .message{
+    font-size: 20px;
+
+  }
+  .cart-summery h1{
+   font-size: 17px;
+  }
+  .cart-summery h1 span{
+    font-size: 17px;
+   }
+  .cart-summery button{
+    padding: 8px 10px;
+    font-size: 17px;
+    
+  }
+  .cart-item-infor h1{
+    font-size: 19px;
+    text-align: center;
+  
+}
+  .cart-item-infor p{
+    font-size: 17px;
+    text-align: center;
+  
+}
+.cart-item-infor button{
+    padding: 8px 10px;
+    font-size: 15px;
+    
+}
+.cart{
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+  
+}
+.cart .cart-section{
+    width: 100%;
+    height: auto;
+ 
+
+}
+.cart  .new-feed-section{
+    width: 100%;
+    height: 500px;
+    margin-top: 2px;
+
+    
+}
+.cart-infor{
+    margin-top: 10px;
+    height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+}
+
+@media screen and (max-width: 750px) {
+    .filtered__list__details{
+        grid-template-columns: repeat(2, 1fr);
+     
+      }
+    .services-container img{
+        width: 500px;
+    }
+    .details-wrapper .top img{
+        width: 100%;
+        border-radius: 10px;
+        flex: 1;
+    
+    }
+    .details-wrapper .bottom .imag-list img{
+        width: 100px;
+        margin: .22em;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .narration .locations h1{
+      font-size: 20px;
+    }
+    .listing-item h1, .ralated-details-wrapper h1{
+     font-size: 17px;
+        margin: .20em;
+    }
+    .listing-item p, .ralated-details-wrapper p{
+        color: var(--pragraph-colore);
+        font-size: 15px;
+    }
+    .contact__chat__details__cards .card{
+
+        width: 100%;
+      
+      }
+      .contact__chat__details__cards .card h1{
+        font-size: 25px;
+        letter-spacing: 3px;
+      }
+      .cart{
+        height: 100%;
+   
+        flex-direction: column;
+        overflow: hidden;
+        overflow-y: scroll;
+      
+    }
+  
+}
+
+@media screen and (max-width: 500px) {
+    .services-container img{
+        width: 400px;
+    }
+    .inventory .middle  h1, .financial .middle h1,
+.sales-purchase .middle h1, .property-managment .middle h1, .rental__housing .middle h1{
+   font-size: 10px;
+ 
+}
+
+}

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sub.css">
+    <title>AburShelters</title>
+</head>
+<body> 
+
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <h1>Abur<span>Shelters</span></h1>
+                <p>Get a home today</p>
+            </div>
+            <nav>
+                <ul class="show">
+                    <li><a href="#home" class="current-p">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#listing">Listing</a></li>
+                </ul>
+                <span onclick="showCart()" class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined menu">
+                        menu
+                        </span>
+            </nav>
+
+            <div class="cart">
+                <span  class="material-symbols-outlined back">
+                    arrow_back
+                    </span>
+                <div class="cart-section">
+                <div class="top">
+                    <h2>Negotiation room</h2>
+                    <div class="actionss">
+                        <h1 class="itemNumber"></h1>
+                        <div class="icons">
+                            <span>favourit</span>
+                            <span>stored</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__info__summary">
+                <div class="cart-infor">
+                    <p class="message">there is nothing in the cart. please go back to shoing!!!!!!!!</p>
+                   <!-- here there is rendered list of items in the cart -->
+                     
+
+
+
+                </div>
+                <div class="cart-summery">
+                    <div class="items-information">
+                        <h1 class="itemNumber2"></h1>
+                    </div>
+                    <div class="information">
+                        <h1 >Subtitle: <span class="subTotal"></span></h1>
+                        <h1 >Fee: <span class="fee"> </span></h1>
+                        <h1 >Total: <span class="toto"></span></h1>
+                      
+                    </div>
+                    <div class="button">
+                        <button>Confirm</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="new-feed-section">
+                <div class="stored">
+                    <h2>Stored</h2>
+                    <div class="list__of__items">
+                        
+                   <!-- rendering stored items -->
+                    </div>
+
+                </div>
+                <div class="new-posted">
+                    <h2>what is new</h2>
+                    <div class="list__of__items">
+                        
+                        <li>
+                            <img src="/assets/pic2.avif" alt="image">
+                            <div class="stored-info">
+                                <h1>housing</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </li>
+                              
+                    <li>
+                        <img src="/assets/pic2.avif" alt="image">
+                        <div class="stored-info">
+                            <h1>housing</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </li>
+                          
+                    <li>
+                        <img src="/assets/pic2.avif" alt="image">
+                        <div class="stored-info">
+                            <h1>housing</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </li>
+                        </div>
+
+                </div>
+                <div class="searched">
+                    <h2>Searched</h2>
+                    <div class="list__of__items">
+                        
+                        <li>
+                            <img src="/assets/pic2.avif" alt="image">
+                            <div class="stored-info">
+                                <h1>housing</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </li>
+                              
+                    <li>
+                        <img src="/assets/pic2.avif" alt="image">
+                        <div class="stored-info">
+                            <h1>housing</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </li>
+                          
+                    <li>
+                        <img src="/assets/pic2.avif" alt="image">
+                        <div class="stored-info">
+                            <h1>housing</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </li>
+                        </div>
+
+                </div>
+            </div>
+
+            </div>
+        </header>
+
+        <div class="container">
+            <section id="home" class="home">
+                <h1><span>Abusolo </span>Welcome to Aburtech services</h1>
+                <p>we are world's digital platform where you can get yourself a home 
+                    and sell a property under real estate unbrella. We are a growing digital platform
+                    working large and small companies all over the world
+                </p>
+                <div class="get-started">
+                    <div class="inputs">
+                       
+                        <input type="text" name="email" id="email" placeholder="Enter your email">
+                        <button>Get started</button>
+                    </div>
+
+                </div>
+                    <div class="easy-links">
+                        <div class="left">
+                            <ul>
+                                <li><a href="#">Facebok</a></li>
+                                <li><a href="#">instagram</a></li>
+                                <li><a href="#">x</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                                <li><a href="#">YouTube</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <h2>Download application</h2>
+                            <div class="app-platfrom">
+                                <img src="./assets/apple.jpg" alt="">
+                                <img src="./assets/google.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                
+
+            </section>
+
+            <section id="about" class="about">
+                <div class="main-about">
+                    <div class="compan-info">
+                        <h1>ABurshelters <span>Get a home today</span>  </h1>
+                            <p>Aburshelter is a company under aburtech services we are the leading real estate
+                                digital platform in Africa  we are currently located in nairobi kenya
+                            </p>
+                      
+                    </div>
+                    <div class="serive-summary">
+                        <div class="card">
+                            <h1>Residentail</h1>
+                            <p>we develop land we the best comtemplary inflastractural designs</p>
+                            <button class="resid">Check out</button>
+                        </div>
+                        <div class="card">
+                            <h1>Ware housing</h1>
+                            <p>we develop land we the best comtemplary inflastractural designs</p>
+                            <button class="warehs">Check out</button>
+                        </div>
+                        <div class="card">
+                            <h1>Hotels</h1>
+                            <p>we develop land we the best comtemplary inflastractural designs</p>
+                            <button class="hotels">Check out</button>
+                        </div>
+                    </div>
+
+                    <div class="office-patn">
+                    <div class="offices">
+                        <h1>Offices</h1>
+                        <div class="cards">
+                            <h1>Kampla Uganda</h1>
+                            <a href="">location</a>
+                        </div>
+                        <div class="cards">
+                            <h1>Dera_el salam Tanzania   </h1>
+                            <a href="">location</a>
+                        </div>
+                        <div class="cards">
+                            <h1>Nairobi Kenya</h1>
+                            <a href="">location</a>
+                        </div>
+                    </div>
+                    <div class="blokers">
+                        <h1>Partners</h1>
+                        <div class="cards">
+                            <h1>j & k morgan</h1>
+                            <p>this is our partner in construction and development</p>
+                        </div>
+                        <div class="cards">
+                            <h1>Aburtech services</h1>
+                            <p>This is our partner in software development</p>
+                        </div>
+                        <div class="cards">
+                            <h1>Zaq good enterprise</h1>
+                            <p>This is our partner in logistics and transportation</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="aside-about">
+                    <div class="founder">
+                        <img src="./assets/pic3.avif" alt="owner">
+                        <div class="details">
+                            <h2>Abusolo Richard</h2>
+                            <p>Mr. Abusolo Richard is the founder of this company and the CEO of Aburtech technologies</p>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <h1>Team</h1>
+                        <div class="team-infor">
+                            <div class="cards">
+                                <p>Stuff</p>
+                                <h1>27</h1>
+
+                            </div>
+                            <div class="cards">
+                                <p>Partners</p>
+                                <h1>27</h1>
+
+                            </div>
+                            <div class="cards">
+                                <p>Developers</p>
+                                <h1>27</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="list__of__target_status">
+                    <span  class="material-symbols-outlined back filtered-back">
+                        arrow_back
+                        </span>
+
+                        <div class="list-narrative">
+                            <h1>Residentails</h1>
+
+                            <div class="filtered__list__details">
+                                <!-- here there a list of filtered items -->
+                             
+
+                            </div>
+                        </div>
+
+                </div>
+
+            </section>
+            <section id="services" class="services">
+                <div class="top">
+                    <h1>Services</h1>
+                    <p>These are the core services offered by aburshelters. However there is a number of
+                    other services offered as you may see while touring this platform
+                    </p>
+                </div>
+                <div class="service-details">
+                    <div class="cards">
+                 
+                        <img src="./assets/pic4.avif" alt="">
+                        <h1>improvement & construction</h1>
+                        <p>We buy, sale and develop land, this the initial stages in giving you the best home.
+                            we offer land titles and legel documentation for the ounership of your land
+                        </p>
+                        <button  class="imp-cons" data-serv ="imp-cons">Explore</button>
+
+                    </div>
+                    <div class="cards">
+                        
+                        <img src="./assets/pic1.avif" alt="">
+                        <h1>Rental housing</h1>
+                        <p>Aburshelters deal in residental, warehouse and commerncial housing,
+                            we have the best conteplary designs with best engneers in the world</p>
+                      
+                        <button class="rental" data-serv ="rental">Explore</button>
+                    </div>
+                    <div class="cards">
+                     
+                        <img src="./assets/re agent.avif" alt="">
+                        <h1>inventory managment</h1>
+                        <p>We support selection and monitoring of supplies</p>
+                        <button class="inventory" data-serv ="inventory">Explore</button>
+                    </div>
+                    <div class="cards">
+                 
+                        <img src="./assets/warebouss.avif" alt="">
+                        <h1>Financial Managment</h1>
+                        <p>we ensure supply finanical health and manage supply well</p>
+                        <button class="finincail" data-serv ="finicial">Explore</button>
+                    </div>
+                    <div class="cards">
+                      
+                        <img src="./assets/re list.avif" alt="">
+                        <h1>Sales and purchase</h1>
+                        <p>we search for properties by expert partners and buy base on location</p>
+                        <button class="sale-p" data-serv ="sale-p">Explore</button>
+                    </div>
+                    <div class="cards">
+                      
+                        <img src="./assets/re list2.avif" alt="">
+                        <h1>Property managment</h1>
+                        <p>Property maintenance, monitering and guidence</p>
+                        <button class="property" data-serv ="property">Explore</button>
+                    </div>
+
+                </div>
+            </section>
+            <section id="blog" class="blog">
+                <div class="top">
+                    <h1>Blog</h1>
+                    <p>Check out on our blogs about the business
+                    </p>
+                </div>
+                <div class="blog-details">
+                    <div class="left">
+                        <h1>BLOG</h1>
+              
+                    </div>
+                    <div class="right blog__lists">
+                        <!-- there is a rendered list of blogs -->
+                    </div>
+                </div>
+
+                <div class="details__blog__page">
+                  
+                    <!-- there is rendered detailed blog -->
+
+                </div>
+
+            </section>
+            <section id="listing" class="listing">
+                <h2>Our Listings</h2>
+                <div class="listing-details">
+                   <div class="product-wrapper">
+                       <!-- here is there list of properties called from out side array -->
+                        
+                   </div>
+                </div>
+
+                <div class="details-page">
+                   <span  class="material-symbols-outlined back">
+                       arrow_back
+                       </span>
+                   <div class="details-wrapper">
+                       <div class="top">
+                           <div class="images-title">
+                       
+                           
+                               <!-- <img src="./assets/pic1.avif" alt="image"> -->
+   
+                           </div>
+                           <div class="narration">
+                               <div class="price-descrip">
+                                   <!-- there is narrative about the property -->
+                               </div>
+                               <div class="locations">
+                                   <h1>Location: <span>Jinja</span></h1>
+                                   <h1>Square meters: <span>2993</span></h1>
+                                   <h1>Plot number: <span>3393</span></h1>
+                                   <h1>Type:<span>Bangalo</span></h1>
+                               </div>
+                            
+                               <div class="action-btns">
+                                   <button onclick="hideDetails()">Back</button>
+                                   <button>Add</button>
+                               </div>
+                           </div>
+                        
+                       </div>
+                       <div class="bottom">
+                           <div class="imag-list">
+                             <!-- there is list of detailed images called for an array -->
+                           </div>
+                       </div>
+                      
+                   
+
+                   </div>
+
+                   <div class="related-details">
+                       <h1>Ralated Properties</h1>
+                       <div class="ralated-list">
+
+                  <!-- list of related items are rendered here from the out list> -->
+                   </div>
+                   </div>
+                </div>
+
+           </section>
+            <section id="contact" class="contact">
+                <div class="top">
+                    <h1>Contact</h1>
+                    <p>Check out on our blogs about the business
+                    </p>
+                </div>
+
+                <div class="contact-details">
+                    <div class="left">
+                        <div  class="form__body form"  >
+                            <div class="card">
+                                <div class="inputss">
+                                    <label for="firstname">First Name</label>
+                                    <input onchange="" type="text" id="firstname" name="firstname">
+                                </div>
+                                <div class="inputss">
+                                    <label for="lastname">last Name</label>
+                                    <input type="text" id="lastname" name="lastname">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="inputss">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                                <div class="inputss">
+                                    <label for="tel">Phone No.</label>
+                                    <input type="text" id="tel" name="tel">
+                                </div>
+
+                            </div>
+                            <textarea class="testarea" name="testarea" id="testarea" placeholder="Enter body here"></textarea>
+                            <button class="send__btn" >Submit</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="cards">
+                            <h1>Kampala Uganda</h1>
+                            <p>P.BOX. 23455, Uganda</p>
+                            <P>info@aburshelters.ug</P>
+                            <p>+256 7794703837</p>
+                        </div>
+                        <div class="cards">
+                            <h1>Nairobi Uganda</h1>
+                            <p>P.BOX. 23455, Kenya</p>
+                            <P>info@aburshelters.ke</P>
+                            <p>+254 7794703837</p>
+                        </div>
+                        <div class="cards">
+                            <h1>New york USA</h1>
+                            <p>P.BOX. 23455, USA</p>
+                            <P>info@aburshelters.usa</P>
+                            <p>+1 7794703837</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="contact__chat__container">
+                    <span  class="material-symbols-outlined back chat-back">
+                        arrow_back
+                        </span>
+                        <div class="contact__chat__details">
+                            <div class="contact__ad__side">
+                                <h2>what are you looking for</h2>
+                                <div class="contact__chat__details__cards">
+                                    <div class="card">
+                                        <h1>Inquaries</h1>
+                                    </div>
+                                    <div class="card">
+                                        <h1>House rentals</h1>
+                                    </div>
+                                    <div class="card">
+                                        <h1>Land</h1>
+                                    </div>
+                                    <div class="card">
+                                        <h1>Propert owner</h1>
+                                    </div>
+                                    <div class="card">
+                                        <h1>Agent</h1>
+                                    </div>
+                                    <div class="card">
+                                        <h1>Partnership</h1>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                            <div class="contact__chat__rorm">
+                                <div class="chat__header">
+                                    <p>Looking for house to rent</p>
+                                </div>
+                                <div class="chat--room">
+                                
+                                    <!-- there is a rendered chats here -->
+
+                                </div>
+                                <div class="chat__input">
+                                    <input class="chat__text" type="text" placeholder="Type here">
+                                    <span class="material-symbols-outlined chat__send">
+                                        send
+                                        </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </section>
+         
+       
+
+
+        <div class="services-container">
+            <span  class="material-symbols-outlined back servic-back">
+                arrow_back
+                </span>
+
+            <div class="improvement__constraction serv__spec__details show" id="imp-cons">
+                <div class="top">
+                    <div class="left">
+                        <h1>improvement and construction</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae eos excepturi non alias nulla qui iste eius numquam, officia deserunt.</p>
+                        <button>Get a service</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/serv1.jpg" alt="image">
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="cards">
+                        <h1>New constraction</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis! Eius, atque accusamus! Distinctio ipsam, provident repellat in dolor voluptatem.</p>
+                    </div>
+                    <div class="cards">
+                        <h1>Renovation</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis! Eius, atque accusamus! Distinctio ipsam, provident repellat in dolor voluptatem.</p>
+                    </div>
+                    <div class="cards">
+                        <h1>Planning and quotation</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis! Eius, atque accusamus! Distinctio ipsam, provident repellat in dolor voluptatem.</p>
+                    </div>
+                    <div class="cards">
+                        <h1>Survey and land making</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis! Eius, atque accusamus! Distinctio ipsam, provident repellat in dolor voluptatem.</p>
+                    </div>
+                   
+                </div>
+
+                <div class="bottom">
+                    <div class="left">
+                        <h1>we are the leading digital real estate body</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium inventore odit unde reiciendis dolorem omnis a nesciunt sunt, quis eum, id exercitationem amet sapiente suscipit?</p>
+                        <button>please Rate us</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/serv7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="rental__housing serv__spec__details" id="rental">
+                <div class="top">
+                    <div class="left">
+                        <img src="./assets/serv9.jpg" alt="image">
+                    </div>
+                    <div class="right">
+                        <h1>Rental Housing</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto cupiditate repellat veniam illum possimus dolores nobis velit facere optio laborum quae nesciunt voluptas incidunt consectetur perspiciatis hic, doloribus doloremque cum!</p>
+                        <button>Get a service</button>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="card">
+                        <h1>residental renting</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, delectus. Maiores ratione quos voluptatibus neque repellendus ducimus distinctio eius perspiciatis?</p>
+                        <img src="./assets/serv4.jpg" alt="image">
+                    </div>
+                    <div class="card">
+                        <h1>Business housing</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta itaque eius culpa, voluptatem nihil eligendi eos ad sequi, numquam deleniti enim, nisi delectus magnam! Similique, tenetur deleniti! Quam, id et?</p>
+                        <img src="./assets/serv8.jpg" alt="image" >
+                    </div>
+
+
+
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="./assets/serv6.jpg" alt="">
+                    </div>
+                    <div class="right">
+                   <h1>we offer renting service with the most comteporary housing</h1>
+                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, minima saepe expedita fuga optio, velit ut reiciendis accusantium consequatur doloribus veniam! Quidem eos cupiditate ipsum assumenda, tempora suscipit accusamus accusantium!</p>
+                   <button>Make inquiries</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="inventory serv__spec__details" id="inventory">
+                <div class="top">
+                    <div class="left">
+                        <img src="./assets/serv4.jpg" alt="image">
+                    </div>
+                    <div class="right">
+                        <h1>Inventory managment</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cum magni minima nobis, tempore molestias quia earum illum impedit sunt ducimus eveniet dolore tenetur, recusandae officia. Laborum corrupti a consectetur.</p>
+                        <button>Get a service</button>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="card">
+                        <h1>data tracking</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, accusantium.</p>
+                            
+                    </div>
+                    <div class="card">
+                        <h1>Sale inventore</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, accusantium.</p>
+                            
+                    </div>
+                    <div class="card">
+                        <h1>Listing inventory</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, accusantium.</p>
+                            
+                    </div>
+                    <div class="card">
+                        <h1>Customer History</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, accusantium.</p>
+                            
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <h1>We offer the best inventory service to keep your business updated</h1>
+                        <button>check history</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/serv5.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="financial serv__spec__details" id="finicial">
+                 <div class="top">
+                    <div class="left">
+                        <h1>Financial managment</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas libero consequatur accusamus sint sit vitae deserunt maiores nihil incidunt repellat aliquid autem quae optio, doloribus expedita! Provident odio assumenda illum.</p>
+                        <button>Get a service</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/pic1.avif" alt="">
+                    </div>
+                 </div>
+                 <div class="middle">
+                     <div class="card">
+                        <h1>Sales</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci libero voluptatem odit? Officia, ab sapiente.</p>
+                     </div>
+                     <div class="card">
+                        <h1>Revenue</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci libero voluptatem odit? Officia, ab sapiente.</p>
+                     </div>
+                     <div class="card">
+                        <h1>Tax</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci libero voluptatem odit? Officia, ab sapiente.</p>
+                     </div>
+                     <div class="card">
+                        <h1>Price setting</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci libero voluptatem odit? Officia, ab sapiente.</p>
+                     </div>
+                     <div class="card">
+                        <h1>Salaries</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci libero voluptatem odit? Officia, ab sapiente.</p>
+                     </div>
+                     
+                 </div>
+                 <div class="bottom">
+                    <div class="left">
+                        <img src="./assets/serv10.jpg" alt="image">
+                    </div>
+                    <div class="right">
+                        <h1>We offer the best fincial managemt services in the digital lense</h1>
+                        <button>Testomonies</button>
+                    </div>
+                 </div>
+            </div>
+
+
+            <div class="sales-purchase serv__spec__details" id="sale-p">
+                <div class="top">
+                    <div class="left">
+                        <h1>Sales and purchase</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit earum repellendus dicta pariatur cum doloremque sapiente in, aperiam incidunt omnis.</p>
+                        <button>Get a service</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/serv3.jpg" alt="image">
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="card">
+                        <h1>Construction materials</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio dolores natus, quisquam similique accusantium!</p>
+                    </div>
+                    <div class="card">
+                        <h1>land serveying</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio dolores natus, quisquam similique accusantium!</p>
+                    </div>
+                    <div class="card">
+                        <h1>Agents</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio dolores natus, quisquam similique accusantium!</p>
+                    </div>
+                    <div class="card">
+                        <h1>Service providers</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo distinctio dolores natus, quisquam similique accusantium!</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img src="./assets/serv9.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h1>Mananging your fund is granteed at Aburshelters</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo nulla voluptas eum eos sequi nihil, reprehenderit voluptatibus!</p>
+                        <button>Check Blogs</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="property-managment serv__spec__details" id="property">
+                <div class="top">
+                    <div class="left">
+                        <img src="/assets/serv7.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h1>Property Managment</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam ut fugit dignissimos harum vel consequuntur ullam adipisci optio laudantium?</p>
+                        <button>Get a service</button>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="card">
+                        <h1>Residetial managment</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae perferendis autem quas pariatur quis.</p>
+                    </div>
+                    <div class="card">
+                        <h1>Commercial managment</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae perferendis autem quas pariatur quis.</p>
+                    </div>
+                    <div class="card">
+                        <h1>WareHouse managment</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae perferendis autem quas pariatur quis.</p>
+                    </div>
+                    <div class="card">
+                        <h1>Rentals managment</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae perferendis autem quas pariatur quis.</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <h1>Know your property</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt necessitatibus minima quo alias enim. Assumenda, a in.</p>
+                        <button>Learn more</button>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/serv3.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="access-links">
+                <div class="card">
+                    <ul>
+                        <li><a href="#">Facebok</a></li>
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">x</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li><a href="#" class="current-p">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#listing">Listing</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <img src="./assets/map.avif" alt="">
+                </div>
+            </div>
+            <hr>
+            <div class="copy-right">
+                <h1 >Aburshelters   <span>Get a yourself a home now</span></h1>
+                <p>AburShelters &copy; 2024 | Aburtech services</p>
+            </div>
+
+        </footer>
+
+    </div>
+    </div>
+   
+
+
+
+    <script src="./arrayData.js"></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
