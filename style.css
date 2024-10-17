@@ -572,7 +572,7 @@ hr{
   height: 100vh;
   margin-top: 4rem;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   z-index: 2;
   display: none;
 }
@@ -1133,7 +1133,7 @@ hr{
     position: fixed;
     background: white;
     top: 60%;
-    width: 1500px;
+    width: 1400px;
    
     max-width: 1500px;
     overflow: hidden;

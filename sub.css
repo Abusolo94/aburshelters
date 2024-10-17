@@ -609,7 +609,6 @@
 
   .details-page{
     width: 100%;
-    z-index: 3;
     margin-top: 2rem;
  
  
@@ -715,7 +714,7 @@
   
   }
   .list__of__target_status{
-    margin-top: 1rem;
+    margin-top: 2rem;
     z-index: 3;
   }
 }
@@ -727,6 +726,12 @@
       }
     .services-container img{
         width: 500px;
+    }
+    .details-page{
+        width: 100%;
+        margin-top: 3rem;
+     
+     
     }
     .details-wrapper .top img{
         width: 100%;
