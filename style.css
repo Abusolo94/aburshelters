@@ -115,21 +115,22 @@
 
 .cart{
     position: fixed;
-    top: 50%;
+    top: 60%;
     background: white;
     padding: 10px 2rem;
-    width: 1500px;
+    width: 1400px;
     max-width: 1500px;
     display: flex;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 2rem;
     display: none;
-    height: 100vh;
+    /* height: 100vh; */
     align-items: center;
     overflow: hidden;
     overflow-y: scroll;
     padding-bottom: 4rem;
+    margin-bottom: 4rem;
   
 
     
@@ -137,7 +138,7 @@
 .cart .back, .details-page .back{
   position: absolute;
   color: red;
-  top: -10px;
+  top: 20px;
   background: white;
   padding: 7px 20px;
   left: 0;
@@ -192,7 +193,7 @@
 }
 .cart-infor{
     margin-top: 10px;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     overflow-y: scroll;
     
@@ -270,53 +271,47 @@
   background: #27627c;
 }
 
-
+.new-feed-section{
+  background: url('./assets/serv8.jpg');
+  height: 530px;
+}
 
 
 .cart  .new-feed-section{
     width: 38%;
-
     margin-top: 2rem;
-  
     overflow: hidden;
     overflow-y: scroll;
     
 }
-
-.new-feed-section li img{
-  width: 100px;
-  border-radius: 10px;
+.cart  .new-feed-section h1{
+  margin: 1rem 0 ;
+  font-size: 30px;
+  color: var(--text-color);
 }
-.new-feed-section li{
-  list-style: none;
+.new-feed-section .detailz{
   display: flex;
-
   align-items: center;
-  justify-content: space-between;
-  background: #676565;
+}
+.new-feed-section .detailz .card{
+  background: black;
+  color: var(--text-color);
+  font-size: 15px;
+  height: 100px;
+  margin-left: 10px;
   padding: 10px;
-  margin-top: 6px;
-  gap: .55em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-.new-feed-section li:hover{
-  background: #888686;
+.new-feed-section .detailz .card:hover{
+  background: #272626;
 }
-.new-feed-section h2{ 
-  background: #27627c;
-  color: white;
-  padding: 3px;
-}
-.new-feed-section li h1{
-  color: var(--text-color);
-  text-transform: capitalize;
-  font-size: 20px;
 
-}
-.new-feed-section li p{
-  color: #fff;
-  font-size: 17px;
-}
+
+
+
 
 
 

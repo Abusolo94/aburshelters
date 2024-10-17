@@ -115,7 +115,7 @@ menuIcone.addEventListener('click', ()=>{
     }
 
     function showRelatedInfo(currentId){
-     const items =    listings.filter(item => item.contegory === currentId.contegory)
+     const items = listings.filter(item => item.contegory === currentId.contegory)
      
         ralated.push(items)
         console.log(ralated)
@@ -156,7 +156,7 @@ menuIcone.addEventListener('click', ()=>{
 
  function addingToCart(currentId){
     if(cart.some(item => item.id === currentId)){
-        console.log('already exsit')
+       display__errors('this item alread added to nagotion room')
         return
     }else{
         let cartItem = listings.find(product => product.id === currentId)
@@ -165,6 +165,7 @@ menuIcone.addEventListener('click', ()=>{
       
         renderingCartItems()
         updatingCartInformation()
+   
       
         showDetails.classList.remove('show')
 
@@ -207,14 +208,15 @@ menuIcone.addEventListener('click', ()=>{
 
  }
 
-
+ const messText = document.querySelector('.message')
  function showCart(){
-    const messText = document.querySelector('.message')
+
     cartEl.classList.toggle('show')
     if(cart.length === 0){
       messText.classList.add('active')
-      return
+      // return
     }
+   
    
 
  }
@@ -274,33 +276,33 @@ menuIcone.addEventListener('click', ()=>{
     totalx.innerText = `Ugx ${totals}/=`
   }
 
-  function storingItems(currentId){
+  // function storingItems(currentId){
      
-    let storedData = cart.find(item => item.id === currentId)
-    stored.push(storedData)
-    renderingCartAdItems(stored)
+  //   let storedData = cart.find(item => item.id === currentId)
+  //   stored.push(storedData)
+  //   renderingCartAdItems(stored)
 
 
-  }
+  // }
    
 
 
-  function renderingCartAdItems(items){
-    storedItem.innerHTML = ""
+  // function renderingCartAdItems(items){
+  //   storedItem.innerHTML = ""
 
-    items.forEach(item => storedItem.innerHTML += `
+  //   items.forEach(item => storedItem.innerHTML += `
         
-           <li>
-                        <img src="${item.thumbnail}" alt="image">
-                        <div class="stored-info">
-                            <h1>${item.title}</h1>
-                            <p>${item.description}</p>
-                        </div>
-                    </li>`
+  //          <li>
+  //                       <img src="${item.thumbnail}" alt="image">
+  //                       <div class="stored-info">
+  //                           <h1>${item.title}</h1>
+  //                           <p>${item.description}</p>
+  //                       </div>
+  //                   </li>`
 
-    )
+  //   )
 
-  }
+  // }
 
 
 
@@ -530,22 +532,36 @@ menuIcone.addEventListener('click', ()=>{
     const email = document.getElementById('email');
     const phone = document.getElementById('tel');
     const text = document.getElementById('testarea');
+    const allInput__el = document.querySelectorAll('.form__body input')
+
+    if(namef.value === '' && names.value=== '' 
+      && email.value==='' && phone.value===''
+       && text.value === ''){
+      display__errors('all input fields must be filled')
+
+    } else{
+      let info = {
+        fname : namef.value,
+        sname : names.value,
+        email: email.value,
+        phone: phone.value,
+
+        text: text.value,
+    }
+    console.log(info.text)
+    contact__data.push(info)
+  console.log(contact__data)
+  renderiingContactClientChat(info)
+
+  contact__chat__container.classList.add('show')
+
+  allInput__el.forEach(input=> input.value = '')
+  text.value =''
+
+    }
   
           
-            let info = {
-                fname : namef.value,
-                sname : names.value,
-                email: email.value,
-                phone: phone.value,
-
-                text: text.value,
-            }
-            console.log(info.text)
-            contact__data.push(info)
-          console.log(contact__data)
-          renderiingContactClientChat(info)
-
-          contact__chat__container.classList.add('show')
+        
  
   }
          
@@ -554,7 +570,6 @@ menuIcone.addEventListener('click', ()=>{
     let html = `
       <p class="client">${info.text}</p>
     `
-
     chat__room.insertAdjacentHTML('beforeend', html)
 
   }
@@ -579,8 +594,58 @@ menuIcone.addEventListener('click', ()=>{
            
       <p class="client">${chat__text.value}</p>
     
-
         `
         chat__room.insertAdjacentHTML('beforeend', html)
+        chat__text.value = ''
        
     }
+
+
+    const error__container = document.querySelector('.error__mess__popup')
+    const error__container__close = document.querySelector('.pop-back')
+    const error__container__ok = document.querySelector('.ok__btn')
+
+    error__container__close.addEventListener('click',  ()=>{
+      error__container.classList.remove('show')
+
+    })
+    error__container__ok.addEventListener('click',  ()=>{
+      error__container.classList.remove('show')
+
+    }) 
+
+    function display__errors(message){
+      const error__messsage = document.querySelector('.error__message')
+      error__container.classList.add('show')
+      error__messsage.textContent = `${message}`
+       
+      setTimeout(()=>{
+        error__container.classList.remove('show')
+
+      }, 3000)
+
+    }
+
+    const payment__section = document.querySelector('.paymenent__section')
+    const payment__back = document.querySelector('.back-payment')
+    payment__back.addEventListener('click', ()=>{
+      payment__section.classList.remove('show')
+
+    })
+
+    function consultancy__inquiry(){
+    
+     
+      if(cart === ''){
+        display__errors('there is nothing in the cart')
+
+      }else{
+        console.log(cart)
+        payment__section.classList.add('show')
+
+      }
+
+
+    }
+
+   
