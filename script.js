@@ -15,11 +15,18 @@
 
   const storedItem= document.querySelector('.list__of__items')
   let cart = [];
-  let stored = [];
-  let newFeed = [];
-  let searched = [];
+
 const menuIcone = document.querySelector('.menu')
 const navMenu = document.querySelector('nav ul')
+const loadingState = document.querySelector('.loading__state')
+function showloadingState(){
+   loadingState.classList.add('active')
+
+   setTimeout(()=>{
+    loadingState.classList.remove('active')
+
+   },3000)
+}
 menuIcone.addEventListener('click', ()=>{
     navMenu.classList.toggle('show')
 
@@ -47,10 +54,6 @@ menuIcone.addEventListener('click', ()=>{
        }
         
     })
-
-  
-
-
   };
 
 
@@ -79,33 +82,38 @@ menuIcone.addEventListener('click', ()=>{
 
     function displayDetails(id){
        const currentItem = listings.find(item => item.id ===id)
+       showloadingState()
 
+       setTimeout(()=>{
+        
        if(currentItem){
-          imageList.innerHTML = ''
-        currentItem.images.forEach(img => 
-          
-            imageList.innerHTML += `
-             <img src="${img.image}">
-            `
-        )
-        image__title.innerHTML =`
-            <img src="${currentItem.thumbnail}" alt="image">
-        `
-        price__descript.innerHTML = `
-            <h1>${currentItem.title}</h1>
-            <p>${currentItem.narrative} </p>
-             <h1>Ugx ${currentItem.price}/=</h1>
-        `
+        imageList.innerHTML = ''
+      currentItem.images.forEach(img => 
+        
+          imageList.innerHTML += `
+           <img src="${img.image}">
+          `
+      )
+      image__title.innerHTML =`
+          <img src="${currentItem.thumbnail}" alt="image">
+      `
+      price__descript.innerHTML = `
+          <h1>${currentItem.title}</h1>
+          <p>${currentItem.narrative} </p>
+           <h1>Ugx ${currentItem.price}/=</h1>
+      `
 
-        detailedActionBtn.innerHTML = `
-           <button onclick="hideDetails()">Back</button>
-             <button onclick="addingToCart(${currentItem.id})">Add</button>
-        `
-        showRelatedInfo(currentItem)
-      
+      detailedActionBtn.innerHTML = `
+         <button onclick="hideDetails()">Back</button>
+           <button onclick="addingToCart(${currentItem.id})">Add</button>
+      `
+      showRelatedInfo(currentItem)
+    
 
-        showDetails.classList.add('show')
-       }
+      showDetails.classList.add('show')
+     }
+
+       },3000)
 
     }
 
@@ -113,7 +121,7 @@ menuIcone.addEventListener('click', ()=>{
         showDetails.classList.remove('show')
 
     }
-
+    
     function showRelatedInfo(currentId){
      const items = listings.filter(item => item.contegory === currentId.contegory)
      
@@ -123,7 +131,6 @@ menuIcone.addEventListener('click', ()=>{
         renderingRelated(items)
 
     }
-
 
     function renderingRelated(item){
         relatedPro.innerHTML = ''
@@ -152,8 +159,6 @@ menuIcone.addEventListener('click', ()=>{
    
  }
 
-
-
  function addingToCart(currentId){
     if(cart.some(item => item.id === currentId)){
        display__errors('this item alread added to nagotion room')
@@ -170,11 +175,6 @@ menuIcone.addEventListener('click', ()=>{
         showDetails.classList.remove('show')
 
     }
-  
-
- 
- 
-
  } 
 
  function renderingCartItems(){
@@ -216,9 +216,6 @@ menuIcone.addEventListener('click', ()=>{
       messText.classList.add('active')
       // return
     }
-   
-   
-
  }
 
  function deletingCartItem(currentId){
@@ -263,10 +260,6 @@ menuIcone.addEventListener('click', ()=>{
         fees += (5/100) * subtotals
         totals += subtotals + fees
         itemsNums += item.unit
-      
-
-        
-
     })
 
     itemNumber.innerText = `${itemsNums} item(s)`
@@ -276,44 +269,8 @@ menuIcone.addEventListener('click', ()=>{
     totalx.innerText = `Ugx ${totals}/=`
   }
 
-  // function storingItems(currentId){
-     
-  //   let storedData = cart.find(item => item.id === currentId)
-  //   stored.push(storedData)
-  //   renderingCartAdItems(stored)
-
-
-  // }
-   
-
-
-  // function renderingCartAdItems(items){
-  //   storedItem.innerHTML = ""
-
-  //   items.forEach(item => storedItem.innerHTML += `
-        
-  //          <li>
-  //                       <img src="${item.thumbnail}" alt="image">
-  //                       <div class="stored-info">
-  //                           <h1>${item.title}</h1>
-  //                           <p>${item.description}</p>
-  //                       </div>
-  //                   </li>`
-
-  //   )
-
-  // }
-
-
-
   const blogListEL = document.querySelector('.blog__lists');
   const blogDetailsShow = document.querySelector('.details__blog__page')
-  
-
-
-
-
-
 
   function renderingBlogLists(){
 
@@ -473,7 +430,7 @@ menuIcone.addEventListener('click', ()=>{
 
   }
   function fitlerlistings__hotel(){
-    const itemz =  listings.filter(property => property.status === 'hotel')
+    const itemz = listings.filter(property => property.status === 'hotel')
     renderingFilteredDetails(itemz) 
 
       
@@ -642,6 +599,9 @@ menuIcone.addEventListener('click', ()=>{
       }else{
         console.log(cart)
         payment__section.classList.add('show')
+        final__payment__cart()
+        updating__final__total__payment()
+        cartEl.classList.remove('show')
 
       }
 
@@ -649,3 +609,135 @@ menuIcone.addEventListener('click', ()=>{
     }
 
    
+
+
+    const final__payments = document.querySelector('.final__payments')
+    const final__payment__btn = document.querySelector('.confirm__payment')
+
+
+    function final__payment__cart(){
+      final__payments.innerHTML = ''
+
+      cart.map(item => final__payments.innerHTML += `
+         <div class="cards">
+                      <img src="${item.thumbnail}" alt="">
+                      <div class="informtn">
+                      <h1>${item.title}</h1>
+                    <p>${item.description}</p>
+                   <h1>ugx${item.price}</h1>
+                </div>
+        
+        `)
+
+    }
+
+    function updating__final__total__payment(){
+       const consulT__fee = document.querySelector('.const__fee')
+       const connect__fee = document.querySelector('.connect__fee')
+       const  totalValue = document.querySelector('.total__final')
+       const  numberItem = document.querySelector('.totaleFinalItem')
+       const  connect__const__total = document.querySelector('.const__connect')
+
+      let fees = 0; let totals =0; let subtotals = 0;
+      let consultz =0; let connectz = 0; let itemsNums =0;
+      let const__conne = 0;
+       cart.forEach(item=>{ 
+        subtotals += item.price
+        fees += (5/100) * subtotals
+        totals += subtotals + fees
+        itemsNums += item.unit
+
+        consultz += (0.1/100) * totals
+        connectz += (0.1/100) * totals
+        const__conne += consultz + connectz
+
+
+       })
+       consulT__fee.textContent = `ugx${consultz}`
+       connect__fee.textContent = `ugx${connectz}`
+       totalValue.textContent = `ugx${totals}`
+       numberItem.textContent = `${itemsNums} item`
+       connect__const__total.textContent = `ugx${const__conne}`
+    }
+
+    final__payment__btn.addEventListener('click', ()=>{
+     
+      payment__section.classList.remove('show')
+     display__errors('thanks for choosing aburshelters we are processing your payment')
+     cart = []
+     renderingCartItems()
+     updatingCartInformation()
+     return
+
+    })
+
+
+    const allPaymentPlatform = document.querySelectorAll('.card__information')
+    const paymentPlatform = document.querySelector('.payment__platform')
+    const platform__tio = document.querySelector('.form__data')
+    const addCard = document.querySelector('.form__data')
+    const addCryptal = document.querySelector('.form__data__cryptal')
+    const addMobile = document.querySelector('.form__data__mobile')
+
+    const addCard__btn = document.querySelector('.addCard')
+    const addCryptal__btn = document.querySelector('.addCryptal')
+    const addMobile__btn = document.querySelector('.addMobile')
+    let savedCards = []
+    let saveCryptal = []
+    let savedMobile = []
+
+    paymentPlatform.addEventListener('click',(e)=>{
+        allPaymentPlatform.forEach(platform=>{
+          if(platform){
+            platform.classList.remove('active')
+
+          }
+
+          e.target.classList.add('active')
+  
+        })
+
+
+
+
+    })
+
+
+    paymentPlatform.addEventListener('click',(e)=>{
+      allPaymentPlatform.forEach(platform=>{
+        if(platform){
+          platform.classList.remove('active')
+
+        }
+
+        e.target.classList.add('active')
+
+      })
+
+  })
+
+
+  addCard__btn.addEventListener('click', ()=>{
+    // platform__tio.classList.add('active');
+    addCard.classList.add('active');
+    addMobile.classList.remove('active');
+    addCryptal.classList.remove('active');
+  })
+
+  addCryptal__btn.addEventListener('click', ()=>{
+    // platform__tio.classList.add('active');
+    addCryptal.classList.add('active');
+    addCard.classList.remove('active');
+    addMobile.classList.remove('active');
+   
+
+  })
+    addMobile__btn.addEventListener('click', ()=>{
+      // platform__tio.classList.add('active');
+      addMobile.classList.add('active');
+      addCard.classList.remove('active');
+      addCryptal.classList.remove('active');
+     
+
+    })
+  

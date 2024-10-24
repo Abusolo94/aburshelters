@@ -31,7 +31,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    scrollbar-width: none;
 
+  }
+  .main-container ::-webkit-scrollbar{
+    display: none;
   }
   .container{
     display: flex;
@@ -1057,6 +1061,7 @@ hr{
     background: #2f2f2f;
     position: relative;
 
+
   
 }
 .listing h2{
@@ -1321,11 +1326,11 @@ hr{
 
 @keyframes amine {
 
-  0%{
-    rotate: 0deg;
+  from{
+    rotate: 180deg;
 
   }
-  100%{
+  to{
     rotate: 360deg;
 
   }
@@ -1699,6 +1704,22 @@ text-align: center;
   /* .main-container{
     background: yellow;
   } */
+   html{
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+
+   }
+   h1{
+    font-size: 15px;
+   }
+   p{
+    font-size: 13px;
+    line-height: 0.88rem;
+   }
+   .container{
+    padding: 10px 2rem;
+   }
 
   .container .home h1{
     font-size: 17px;
@@ -1707,6 +1728,7 @@ text-align: center;
   .container .home p{
     font-size: 12px;
     line-height: 1rem;
+ 
 
   }
   .logo h1{
@@ -1728,7 +1750,7 @@ text-align: center;
  
  }
  .main-about .serive-summary .card button{
-   padding: 6px 8px;
+   padding: 3px 6px;
    font-size: 15px;
  
  }
@@ -1757,8 +1779,8 @@ font-size: 20px;
 
 }
 .service-details .cards button{
-  padding: .30em .10em;
-  font-size: 15px;
+  padding: .20em .6em;
+  font-size: 14px;
 
 
   

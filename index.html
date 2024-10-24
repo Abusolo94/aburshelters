@@ -102,7 +102,7 @@
                         <div class="card">
                             <h2>Connection</h2>
                         </div>
-                        <div class="card">
+                        <div class="card">  
                             <h2>Testomonies</h2>
                         </div>
                         
@@ -127,23 +127,8 @@
 
                     <div class="payment__details">
                         <div class="top">
-                            <div class="left">
-                                <div class="cards">
-                                    <img src="./assets/pic1.avif" alt="">
-                                    <div class="informtn">
-                                        <h1>Bangalo</h1>
-                                        <p>the conteporaly design</p>
-                                        <h1>ugx 20000000</h1>
-                                    </div>
-                                </div>
-                                <div class="cards">
-                                    <img src="./assets/pic1.avif" alt="">
-                                    <div class="informtn">
-                                        <h1>Bangalo</h1>
-                                        <p>the conteporaly design</p>
-                                        <h1>ugx 20000000</h1>
-                                    </div>
-                                </div>
+                            <div class="left final__payments">
+                               <!-- there is a randered list of final cart products -->
                             </div>
                             <div class="right">
                            
@@ -156,26 +141,26 @@
                         </div>
                         <div class="middle">
                             <div class="payment__platform">
-                                <div class="card__information">
+                                <div class="card__information active">
                                     <h1>Debit/Credit card</h1>
                                     <span class="material-symbols-outlined">
                                         credit_card
                                         </span>
-                                        <button>+</button>
+                                        <button class="addCard">+</button>
                                 </div>
                                 <div class="card__information">
                                     <h1>Cryptal</h1>
                                     <span class="material-symbols-outlined">
                                         credit_card
                                         </span>
-                                        <button>+</button>
+                                        <button class="addCryptal">+</button>
                                 </div>
                                 <div class="card__information">
                                     <h1>Mobile wallet</h1>
                                     <span class="material-symbols-outlined">
                                         credit_card
                                         </span>
-                                        <button>+</button>
+                                        <button class="addMobile">+</button>
                                 </div>
 
                             </div>
@@ -183,6 +168,8 @@
                     
 
                             <div class="card__input">
+
+                                <div class="form__data">
                                 <div class="card__form">
                                      <div class="inputs">
                                         <label for="CardNumber">Card Number:</label>
@@ -209,6 +196,73 @@
                                 <button>Confirm</button>
                             </div>
 
+                            <div class="form__data__cryptal">
+                              
+                                <div class="crytpal__form">
+                                    <div class="inputs">
+                                       <label for="accNumber">Acc Number:</label>
+                                       <input type="text" id="accNumber">
+                                    </div>
+                                   
+                                    <div class="inputs">
+                                       <label for="accemail">Acc email:</label>
+                                       <input type="email" id="accemail">
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="accpassword">Acc email:</label>
+                                        <input type="email" id="accpassword">
+                                     </div>
+                                
+
+                               </div>
+
+                               <button>Confirm</button>
+                            </div>
+                                
+                            <div class="form__data__mobile">
+
+                               <div class="mobile__form">
+                                <div class="inputs">
+                                   <label for="telNumber">Tel Number:</label>
+                                   <input type="text" id="telNumber">
+                                </div>
+                                <div class="inputs ">
+                                  <select name="telcom" id="telcom">
+                                    <option value="">Select</option>
+                                    <option value="MTN">MTN</option>
+                                    <option value="Airtel">Airtel</option>
+                                  </select>
+           
+                                </div>
+                                <div class="inputs">
+                                   <label for="acname">Acc Name:</label>
+                                   <input type="text" id="acname">
+                                </div>
+                            
+
+                           </div>
+                                <button>Confirm</button>
+                            </div>
+
+
+
+                             <div class="payment__plat__details">
+                                <li>
+                                    <input type="radio" name="debit" value="debit" id="debit">
+                                    <label for="debit">********334</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="debit" value="Cryptal" id="Cryptal">
+                                    <label for="debit">****uuyrjhha344jf../d</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="debit" value="mobile" id="mobile">
+                                    <label for="debit">+*****345</label>
+                                </li>
+
+                             </div>
+                            </div>
+
                         
 
                         </div>
@@ -218,15 +272,19 @@
                             <h1>Order summary</h1>
                             <div class="summary__payment">
                             <div class="prices">
-                                <h2>consultation fee <span>ugx 30,000</span></h2>
-                                <h2>connection fee <span>20,000</span></h2>
+                                <h2>consultation fee: <span class="const__fee"></span></h2>
+                                <h2>connection fee: <span class="connect__fee"></span></h2>
                             </div>
                            
                              <div class="price__summary">
-                                <h2>2 <span>Items</span></h2>
-                                <h2>Ugx 120000</h2>
+                                <h2> <span class="totaleFinalItem"></span>Items</h2>
+                                <h2 Total: class="total__final"></h2>
                              </div>
-                             <button>Confirm payment</button>
+                             <div class="btnzzz">
+                                <h1>Total fee: <span class="const__connect"></span></h1>
+                                <button class="confirm__payment">Confirm payment</button>
+                             </div>
+                           
                          </div>
                     
                         </div>
@@ -262,7 +320,7 @@
                             </ul>
                         </div>
                         <div class="right">
-                            <h2>Download application</h2>
+                 
                             <div class="app-platfrom">
                                 <img src="./assets/apple.jpg" alt="">
                                 <img src="./assets/google.png" alt="">
@@ -915,6 +973,11 @@
                 </div>
 
                 <button class="ok__btn">ok </button>
+
+        </div>
+        <div class="loading__state">
+             <div class="outer__layer"></div>
+             <div class="inner__layer"> </div>
 
         </div>
 
