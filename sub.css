@@ -652,11 +652,11 @@
 
 
 @media screen and (max-width: 1024px) {
-    header{
+    /* header{
         background: #191a1a;
-    }
+    } */
 
-    
+
     .services-container{
         width: 100%;
         display: flex;
@@ -952,9 +952,9 @@
 
 @media screen and (max-width: 750px) {
 
-    header{
+    /* header{
         background: #517a7a;
-    }
+    } */
     .list__of__target_status{
         margin-top: 4.44rem;
 
@@ -1134,9 +1134,9 @@
 
 @media screen and (max-width: 500px) {
 
-    header{
+    /* header{
         background: #c53b10;
-    }
+    } */
     .services-container img{
         width: 400px;
     }
