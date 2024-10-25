@@ -652,9 +652,11 @@
 
 
 @media screen and (max-width: 1024px) {
-    /* header{
+    header{
         background: #191a1a;
-    } */
+    }
+
+    
     .services-container{
         width: 100%;
         display: flex;
@@ -847,6 +849,7 @@
   }
 
 
+
   .payment__details{
     height: 600px;
     overflow: hidden;
@@ -949,12 +952,31 @@
 
 @media screen and (max-width: 750px) {
 
-    /* header{
+    header{
         background: #517a7a;
-    } */
+    }
+    .list__of__target_status{
+        margin-top: 4.44rem;
+
+    }
     .filtered__list__details{
         grid-template-columns: repeat(2, 1fr);
      
+      }
+      .filtered-back{
+        padding: 4px 6px;
+        font-size: 17px;
+      }
+    
+
+      .list__of__target_status .filtered__list__details .listing-cards p{
+        display:  -webkit-box;
+        line-clamp: 1;
+        -webkit-line-clamp:1 ;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+
+    
       }
     .services-container img{
         width: 500px;
@@ -1111,9 +1133,10 @@
 }
 
 @media screen and (max-width: 500px) {
-    /* header{
+
+    header{
         background: #c53b10;
-    } */
+    }
     .services-container img{
         width: 400px;
     }
@@ -1121,6 +1144,20 @@
 .sales-purchase .middle h1, .property-managment .middle h1, .rental__housing .middle h1{
    font-size: 10px;
  
+}
+
+.list__of__target_status .filtered__list__details .listing-cards h1{
+    font-size: 15px;
+  }
+  .list__of__target_status .filtered__list__details .listing-cards img{
+    height: 100px;
+
+  }
+  
+.list__of__target_status .filtered__list__details .listing-cards button{
+    padding: 4px 6px;
+    font-size: 15px;
+    margin: 10px;
 }
 
 }
