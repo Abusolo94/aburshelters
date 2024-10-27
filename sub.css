@@ -8,7 +8,7 @@
 
 
 
-.services-container{
+.services-container, .cart{
     background: gray;
     padding: 10px 2rem;
     position: fixed;
@@ -307,6 +307,7 @@
 }
 .error__info p{
     font-size: 25px;
+    text-align: center;
 }
 .error__mess__popup button{
     padding: 10px 20px;
@@ -1019,9 +1020,8 @@
         font-size: 25px;
         letter-spacing: 3px;
       }
-      .cart{
+      .card__details{
         height: 100%;
-   
         flex-direction: column;
         overflow: hidden;
         overflow-y: scroll;
@@ -1159,5 +1159,249 @@
     font-size: 15px;
     margin: 10px;
 }
+
+.services-container{
+    top: 55%;
+    left: 50%;
+    width: 360px
+  
+}
+.services-container .back{
+    padding: 4px 6px;
+    font-size: 17px;
+
+}
+
+.improvement__constraction .top .left h1,
+.rental__housing .top h1,
+.rental__housing  .bottom h1{
+font-size: 15px;
+
+}
+.improvement__constraction .top .left p, 
+.rental__housing .top p,
+.rental__housing  .bottom p{
+    font-size: 14px;
+    line-height: 1rem;
+}
+.improvement__constraction .top .left button,
+.improvement__constraction .bottom button,
+.rental__housing .top button,
+.rental__housing  .bottom button{
+    font-size: 15px;
+  
+}
+
+
+.inventory .middle .card h1, .financial .middle h1,
+.sales-purchase .card h1, .property-managment .middle h1{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.inventory .middle .card p, .financial .middle p,
+.sales-purchase .middle p, .property-managment .middle p{
+    color: var(--pragraph-colore);
+    line-height: 1rem;
+}
+
+
+.inventory .bottom .left h1, .financial .bottom .right h1,
+.sales-purchase .bottom .right h1, .property-managment .bottom .left h1{
+    color: var(--text-color);
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.improvement__constraction .middle .cards h1{
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+
+.improvement__constraction .bottom h1{
+font-size: 15px;
+}
+
+
+
+
+.details-page{
+    top: 50%;
+    padding: 10 2rem;
+}
+.details-page  .back{
+  top: 10px;
+  padding: 5px 10px;
+  font-size: 15px;
+  left: 10px;
+  border-radius: 10px;
+
+
+}
+
+.details-wrapper{
+  background: #5a717a;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.details-wrapper .top{
+    gap: 10px;
+}
+.details-wrapper .top h1{
+    text-transform: capitalize;
+    margin: 1em;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+.details-wrapper .top p{
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.details-wrapper .top img{
+    width: 100%;
+    border-radius: 10px;
+    flex: 1;
+
+}
+.narration{
+    background:#676565;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.narration p{
+    font-size: 20px;
+    line-height: 1.88rem;
+    color: #a28a05;
+    
+
+}
+
+.price-descrip h1{
+    color: var(--text-color);
+}
+
+
+
+.narration .locations h1 span{
+    color: #a28a05;
+    margin-left: 1em;
+}
+
+.action-btns button{
+    padding: 5px 10px;
+    font-size: 17px;
+   
+}
+.details-wrapper .bottom .imag-list img{
+    width: 90px;
+    margin: 2px;
+
+    border-radius: 10px;
+}
+.ralated-details-wrapper p{
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp:2 ;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+.cart{
+    position: fixed;
+    top: 57%;
+    padding-bottom: 6rem;
+    height: 100vh;
+}
+
+
+.cart .back{
+    top: 17px;
+    padding: 5px 10px;
+  }
+
+
+  .cart-infor{
+    margin-top: 10px;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.cart-infor li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #beb8b8;
+    padding: 4px;
+    list-style: none;
+    margin-top: 2px;
+    border-radius: 10px;
+
+
+}
+.cart-item-infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .20rem;
+}
+.cart-item-infor p{
+    font-size: 14px;
+    text-align: center;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp:2 ;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  
+}
+.cart-item-infor button{
+    padding: 5px 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+}
+.cart-infor li img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.paymenent__section{
+    position: fixed;
+    top: 40%;
+ 
+}
+.payment__details .top .right .statement p{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.back-payment{
+    font-size: 17px;
+    padding: 5px 10px;
+
+}
+.payment__details{
+    margin-top: 2rem;
+}
+
+.error__info p{
+    font-size: 14px;
+    
+}
+
+
+
+
+
 
 }

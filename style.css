@@ -123,19 +123,17 @@
     display: none;
   }
 
-.cart{
+/* .cart{
     position: fixed;
     top: 60%;
     background: white;
-    padding: 10px 2rem;
-    width: 1400px;
-    max-width: 1500px;
+    padding: 10px 4rem;
+    width: 100%;
     display: flex;
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 2rem;
-    display: none;
-    /* height: 100vh; */
+
     align-items: center;
     overflow: hidden;
     overflow-y: scroll;
@@ -144,8 +142,14 @@
   
 
     
+} */
+.card__details{
+  padding: 10px 2rem;
+  display: flex;
+  align-items: center;
+
 }
-.cart .back, .details-page .back{
+ .back, .details-page .back{
   position: absolute;
   color: red;
   top: 20px;
@@ -340,15 +344,17 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    padding: 10px 2rem;
+ 
   }
   .home__details{
     background: url('./assets/pic1.avif');
     height: 100%;
+    background-size: cover  ;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 10px 2rem;
 
   }
 
@@ -736,11 +742,12 @@ hr{
 .blog-details .right .cards{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 1em;
-    margin: 1em;
+    margin: 10px;
     background: #272626;
     padding: 4px;
+    width: 100%;
 
 }
 .blog-details .right .cards h1{
@@ -1366,10 +1373,6 @@ hr{
     padding: 10px 2rem ;
   }
   nav ul{
-    display: none;
-  }
-  nav ul.show{
-    display: block;
     position: absolute;
     top: 100%;
     background: rgb(6, 65, 92);
@@ -1381,6 +1384,12 @@ hr{
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 2rem;
+    display: none;
+  }
+  nav ul.show{
+    display: block;
+    display: flex;
+   
  
   }
   .menu{
@@ -1723,6 +1732,9 @@ text-align: center;
   .access-links img:hover{
     transform: scale(1) translate(1px);
   }
+  .easy-links .right{
+    margin-top: 1rem;
+}
 
 }
 
@@ -1736,7 +1748,7 @@ text-align: center;
     align-items: center;
     padding: 10px 2rem;
    }
-   .home{
+   .container .home{
     width: 100%;
 
    }
@@ -1853,6 +1865,15 @@ font-size: 14px;
     overflow: hidden;
     font-size: 15px;
   }
+  .blog-details .right .cards button{
+
+    padding: .20em;
+    font-size: 13px;
+
+}
+.blog-details .right .cards h1{
+  font-size: 15px;
+}
    /* <==============listing=====================> */
    .listing .listing-details .product-wrapper .listing-item  h1{
     font-size: 15px;
@@ -1958,8 +1979,6 @@ footer{
 }
 header{
   width: 100%;
-  max-width: 400px;
-
 }
 
 .navBar{
@@ -1967,6 +1986,55 @@ header{
   max-width: 400px;
 }
 
+.filtered__list__details h1{
+  font-size: 15px;
+
+}
+.list__of__target_status{
+  width: 350px;
+}
+
+.details__blog__page{
+  position: fixed;
+  top: 55%;
+  width: 100%;
+  
+}
+.details__blog__page.show{
+  display: block;
+}
+.details__blog__page .back{
+  position: fixed;
+  top: 20px;
+  padding: 5px 6px;
+  font-size: 17px;
+
+
+}
+
+.blog__page-info{
+  margin-top: 2rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 90%;
+  padding-bottom: 4rem;
+}
+.blog__page-info .blog-header{
+flex-direction: column-reverse;
+}
+.blog__page-info .blog-header .description h1{
+  font-size: 15px;
+
+}
+.blog__page-info .blog-header .description p{
+  font-size: 14px;
+}
+.blog__body{
+  margin-top: 2rem;
+  font-size: 14px;
+  line-height: 1.20rem;
+}
 
 }
 
